@@ -13,7 +13,7 @@ def cabecalho():
 
 def lateral():
     print("------------------------------------------------------------------------")
-    print("        Agora serão coletados seus contatos e endereço                  ")
+    print("             Agora serão coletados alguns de seus dados                 ")
     print("------------------------------------------------------------------------")
     arquivo.write("<div class=\"lateral\">" + "\n" + "  <img src=\"img/perfil.png\" alt=\"Imagem de perfil\">" + "\n")
     telefone = input("Digite o seu telefone de contato:")
@@ -21,14 +21,12 @@ def lateral():
     arquivo.write("  <h2>" + "Contato" + "</h2>" + "\n")
     arquivo.write("  <h3>" + "Telefone: " + "<br>" + telefone + "</h3>" + "\n")
     arquivo.write("  <h3>" + "E-mail: " + "<br>"  + email + "</h3>" + "\n")
-    arquivo.write("  <h2>" + "Endereço" + "</h2>" + "\n")
-    rua = input("Digite a sua rua:")
-    bairro = input("Digite o seu bairro:")
+    arquivo.write("  <h2>" + "Informações" + "</h2>" + "\n")
+    nasc = input("Digite sua data de nascimento:")
+    idade = input("Digite a sua idade:")
     cidade = input("Digite a sua cidade:")
-    num = input("Digite o número da sua casa:")
-    arquivo.write("  <h3>" + "Rua: " + "<br>" + rua + "</h3>" + "\n")
-    arquivo.write("  <h3>" + "Bairro: " + "<br>"  + bairro + "</h3>" + "\n")
-    arquivo.write("  <h3>" + "Número: " + "<br>"  + num + "</h3>" + "\n")
+    arquivo.write("  <h3>" + "Aniversário: " + "<br>" + nasc + "</h3>" + "\n")
+    arquivo.write("  <h3>" + "Idade: " + "<br>"  + idade + "</h3>" + "\n")
     arquivo.write("  <h3>" + "Cidade: " + "<br>"  + cidade + "</h3>" + "\n" + "</div>" + "\n")
     
 def central():
@@ -67,7 +65,8 @@ def formacao():
         arquivo.write("  <h3> -" + formacao + "</h3>" + "\n" + "  <ul>" + "\n")
         arquivo.write("    <li>" + curso + "</li>" + "\n" + "  </ul>" + "\n")
         c = int(input("Digite 1 para digitar mais ou 0 para sair:"))
-    arquivo.write("</div>" + "\n")
+    arquivo.write("</div>" + "\n" + "</body>" + "\n" + "</html>")
+    arquivo.close()
           
 
 cabecalho()

@@ -1,5 +1,8 @@
 arquivo = open('curriculo.html', encoding='utf-8', mode='w')
 def cabecalho():
+    print("------------------------------------------------------------------------")
+    print("               Bem Vindo ao gerador de curriculo!!                      ")
+    print("------------------------------------------------------------------------")
     arquivo.write("<!DOCTYPE html>" + "\n" + "<html lang=\"pt-br\">" + "\n" + "<head>" + "\n" + "  <meta charset=\"UTF-8\">" + "\n" + 
     "  <title>" + "Curriculo" + "</title>" + "\n" + "  <link rel=\"stylesheet\" href=\"estilo.css\">" + "\n" + "</head>" + "\n" + "<body>" + "\n")
     nome = input("Digite o seu nome completo:")
@@ -9,7 +12,9 @@ def cabecalho():
     
 
 def lateral():
-    
+    print("------------------------------------------------------------------------")
+    print("        Agora serão coletados seus contatos e endereço                  ")
+    print("------------------------------------------------------------------------")
     arquivo.write("<div class=\"lateral\">" + "\n" + "  <img src=\"img/perfil.png\" alt=\"Imagem de perfil\">" + "\n")
     telefone = input("Digite o seu telefone de contato:")
     email = input("Digite o seu e-mail:")
@@ -27,6 +32,9 @@ def lateral():
     arquivo.write("  <h3>" + "Cidade: " + "<br>"  + cidade + "</h3>" + "\n" + "</div>" + "\n")
     
 def central():
+    print("------------------------------------------------------------------------")
+    print("        Agora queremos saber um pouco sobre suas habilidades            ")
+    print("------------------------------------------------------------------------")
     arquivo.write("<div class=\"central\">" + "\n" + "  <h2>" + "Habilidades" + "</h2>" + "\n" + "  <ul>" + "\n")
     i = 1
     while i == 1:
@@ -36,6 +44,9 @@ def central():
     arquivo.write("  </ul>" + "\n")
 
 def central2():
+    print("------------------------------------------------------------------------")
+    print("          Possui conhecimento em alguma língua estrangeira?             ")
+    print("------------------------------------------------------------------------")
     arquivo.write("  <h2>" + "Línguas estrangeiras" + "</h2>" + "\n" + "  <ul>" + "\n")
     b = 1
     while b == 1:
@@ -45,13 +56,16 @@ def central2():
     arquivo.write("  </ul>" + "\n" + "</div>")
 
 def formacao():
+    print("------------------------------------------------------------------------")
+    print("                         Formações acadêmicas                           ")
+    print("------------------------------------------------------------------------")
     arquivo.write("<div class=\"formacao\">" + "\n" + "  <h2>" + "Formação" + "</h2>" + "\n")
     c = 1
     while c == 1:
         formacao = input("Digite primeiro o instituto de ensino:")
         curso = input("Agora digite a formação:")
         arquivo.write("  <h3> -" + formacao + "</h3>" + "\n" + "  <ul>" + "\n")
-        arquivo.write("    <li>" + curso + "</li>" + "\n" + "  </ul>")
+        arquivo.write("    <li>" + curso + "</li>" + "\n" + "  </ul>" + "\n")
         c = int(input("Digite 1 para digitar mais ou 0 para sair:"))
     arquivo.write("</div>" + "\n")
           

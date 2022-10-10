@@ -22,7 +22,7 @@
 .lateral{
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     background-color: #093041;
     padding: 35px;
     height: 96%;
@@ -49,10 +49,10 @@
 }
 
 .lateral h3{
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 10px;
     text-align: left;
-    padding: 7px;
+    padding: 3px;
     font-weight: 100;
 }
 
@@ -131,6 +131,9 @@
     .central{
         top: 52%;
     }
+    .formacao{
+        top: 40%;
+    }
    
 }
 
@@ -138,12 +141,13 @@
     .central{
         top: 55%;
     }
+    
    
 }
 @media(max-width: 1880px){
     .formacao{
         left: 73%;
-        top: 39%;
+        
     }
 }
 

@@ -22,7 +22,7 @@
 .lateral{
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     background-color: #093041;
     padding: 35px;
     height: 96%;
@@ -58,9 +58,8 @@
 
 .central{
     position: absolute;
-    top: 45%;
-    left: 30%;
-    transform: translate(-50%,-50%);
+    margin-top: 200px;
+    margin-left: 500px;
     text-align: left;
 }
 
@@ -76,21 +75,17 @@
     
 }
 
-.central ul li{
-    font-size: 30px;
-}
 
 .central li{
     font-family: Helvetica;
     font-size: 25px;
-    padding: 8px;
+    padding: 4px;
 }
 
 .formacao{
     position: absolute;
-    top: 34%;
-    left: 70%;
-    transform: translate(-50%,-50%);
+    margin-top: 200px;
+    margin-left: 1100px;
 }
 
 .formacao h2{
@@ -121,91 +116,59 @@
 
 @media(max-height: 810px){
     .central{
-        top: 50%;
+        margin-top: 210px;
     }
-
-
-}
-
-@media(max-height: 770px){
-    .central{
-        top: 52%;
-    }
-    .formacao{
-        top: 40%;
-    }
-   
-}
-
-@media(max-height: 740px){
-    .central{
-        top: 55%;
-    }
-    
-   
-}
-@media(max-width: 1880px){
-    .formacao{
-        left: 73%;
-        
-    }
-}
-
-
-@media(max-width: 1740px){
-    .central{
-        left: 33%;
-    }
-  
-}
-
-@media(max-width: 1720px){
-   .formacao ul li{
-    font-size: 20px;
-   }
-  
-}
-
-
-@media(max-width: 1600px){
-    .central{
-        left: 36%;
-    }
-    .formacao{
-        left: 76%;
-
-    }
-
     .central h2{
         font-size: 30px;
     }
-    .central ul li{
-        font-size: 25px;
+
+    .central li{
+        font-size: 20px;
+    }
+
+    .formacao{
+        margin-top: 210px;
     }
 
     .formacao h2{
         font-size: 30px;
     }
-    
+
+    .formacao li{
+        font-size: 20px;
+    }
+
     .formacao h3{
         font-size: 25px;
     }
+
+
 }
 
-@media(max-width: 1470px){
+
+@media(max-width: 1600px){
     .central{
-        left: 39%;
+        margin-left: 450px;
     }
     .formacao{
-        left: 79%;
+        margin-left: 1050px;
     }
 }
 
-@media(max-width: 1370px){
+@media(max-width: 1550px){
     .central{
-        left: 40%;
+        margin-left: 400px;
     }
     .formacao{
-        left: 80%;
+        margin-left: 1000px;
+    }
+}
+
+@media(max-width: 1420px){
+    .central{
+        margin-left: 350px;
+    }
+    .formacao{
+        margin-left: 950px;
     }
 }

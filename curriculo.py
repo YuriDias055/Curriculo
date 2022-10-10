@@ -20,7 +20,7 @@ def lateral():
     rua = input("Digite a sua rua:")
     bairro = input("Digite o seu bairro:")
     cidade = input("Digite a sua cidade:")
-    num = input("Digiteo o número da sua casa:")
+    num = input("Digite o número da sua casa:")
     arquivo.write("  <h3>" + "Rua: " + "<br>" + rua + "</h3>" + "\n")
     arquivo.write("  <h3>" + "Bairro: " + "<br>"  + bairro + "</h3>" + "\n")
     arquivo.write("  <h3>" + "Número: " + "<br>"  + num + "</h3>" + "\n")
@@ -30,12 +30,34 @@ def central():
     arquivo.write("<div class=\"central\">" + "\n" + "  <h2>" + "Habilidades" + "</h2>" + "\n" + "  <ul>" + "\n")
     i = 1
     while i == 1:
-        habilidades = input("Digite uma linguagem em que você possui conhecimento:")
+        habilidades = input("Digite uma linguagem de programação em que você possui conhecimento:")
         arquivo.write("    <li>" + habilidades + "</li>" + "\n")
         i = int(input("Digite 1 para digitar mais ou 0 para sair:"))
+    arquivo.write("  </ul>" + "\n")
+
+def central2():
+    arquivo.write("  <h2>" + "Línguas estrangeiras" + "</h2>" + "\n" + "  <ul>" + "\n")
+    b = 1
+    while b == 1:
+        linguas = input("Caso você possua conhecimento com alguma língua estrangeira, digite a mesma:")
+        arquivo.write("    <li>" + linguas + "</li>" + "\n")
+        b = int(input("Digite 1 para digitar mais ou 0 para sair:"))
     arquivo.write("  </ul>" + "\n" + "</div>")
-    
+
+def formacao():
+    arquivo.write("<div class=\"formacao\">" + "\n" + "  <h2>" + "Formação" + "</h2>" + "\n")
+    c = 1
+    while c == 1:
+        formacao = input("Digite primeiro o instituto de ensino:")
+        curso = input("Agora digite a formação:")
+        arquivo.write("  <h3> -" + formacao + "</h3>" + "\n" + "  <ul>" + "\n")
+        arquivo.write("    <li>" + curso + "</li>" + "\n" + "  </ul>")
+        c = int(input("Digite 1 para digitar mais ou 0 para sair:"))
+    arquivo.write("</div>" + "\n")
+          
 
 cabecalho()
 lateral()
 central()
+central2()
+formacao()
